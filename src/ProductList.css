@@ -50,20 +50,17 @@ body {
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    /* background-color: pink; */
-    /* justify-content: space-between; */
+    gap: 20px; /* Reduced from 50px for better fit */
     padding: 20px;
     width: 100%;
-    max-width: 1200px;
-    /*align-items: center; */
-    justify-content: space-between;
+    max-width: 1200px; /* Cap width to fit 3 cards */
+    justify-content: space-between; /* Distribute cards evenly */
 }
 
 /* Product Card */
 .product-card {
-    flex: 0 0 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap */
-    max-width: calc(26.33% - 20px); /* Adjust max-width for 3 cards per row with 20px gap */
+    flex: 0 0 calc(33.33% - 14px); /* 3 cards per row with 20px gap */
+    max-width: calc(33.33% - 14px);
     margin-bottom: 20px;
     padding: 10px;
     background-color: #fff;
@@ -71,8 +68,6 @@ body {
     border-radius: 5px;
     text-align: center;
     position: relative;
-    box-sizing: border-box;
-    gap: 20px;
 }
 
 /* Pseudo-classes - Hover effect on product button */
@@ -173,11 +168,11 @@ body {
     font-size: 29px;
 
 }
-.plantname_heading{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-    /* background-color: yellow; */
+.plantname_heading {
+    display: flex;
+    flex-direction: column; /* Stack title and cards vertically */
+    align-items: center;
+    width: 100%;
 }
 .plant_heading{
     width: 400px;
