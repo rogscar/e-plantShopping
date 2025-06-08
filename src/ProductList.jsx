@@ -103,6 +103,11 @@ function ProductList({ onHomeClick }) {
         setShowCart(true);
     };
 
+    const handlePlantsClick = (e) => {
+        e.preventDefault();
+        setShowCart(false); // Show plant list by setting showCart to false
+    };
+
     const handleContinueShopping = (e) => {
         e.preventDefault();
         setShowCart(false);
@@ -131,6 +136,11 @@ function ProductList({ onHomeClick }) {
                     </div>
                 </div>
                 <div style={styleObjUl} className="ul">
+                    <div>
+                        <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA}>
+                            Plants
+                        </a>
+                    </div>
                     <div>
                         <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
                             <h1 className="cart">
